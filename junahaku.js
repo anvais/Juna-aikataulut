@@ -412,7 +412,7 @@ function siirryKirjautuneenaAikatauluSivulle() {
 function luoVaroitusViesti(viesti) {
    var varoitusViesti= '<div id=\"varoitusviesti\" class=\"alert alert-danger alert-dismissable\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">×</a>' +viesti+ '</div>';
     $('#viestit').append(varoitusViesti);
-    $('#varoitusviesti').click(function(){
-        $('#varoitusviesti').alert("close");
+    $('#varoitusviesti').delay(1000).slideUp(200, function() {
+        $(this).alert('close');
     });
 }
