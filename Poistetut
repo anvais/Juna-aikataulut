@@ -1,0 +1,37 @@
+ <div class="clock-builder-output text-center" style="position: fixed; bottom: 50px; left: 100px"></div>
+
+    <!--Tässä kellon scriptiä ja tyyliä-->
+    <script type="text/javascript" src="clock_assets/flipclock.js"></script>
+    <style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn {
+        color: white;
+        background-color: #333333;
+    }
+
+    body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot {
+        background: #323434;
+    }
+
+    body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a {
+        color: #323434;
+    }</style>
+    <script type="text/javascript">
+        $(function () {
+            FlipClock.Lang.Custom = {days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds'};
+            var opts = {
+                clockFace: 'TwentyFourHourClock',
+                countdown: true,
+                language: 'Custom'
+            };
+            opts.classes = {
+                active: 'flip-clock-active',
+                before: 'flip-clock-before',
+                divider: 'flip-clock-divider',
+                dot: 'flip-clock-dot',
+                label: 'flip-clock-label',
+                flip: 'flip',
+                play: 'play',
+                wrapper: 'flip-clock-small-wrapper'
+            };
+            $('.clock-builder-output').FlipClock(opts);
+        });
+    </script>

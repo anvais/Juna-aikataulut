@@ -1,0 +1,45 @@
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    z-index: 99;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: Gill Sans , sans-serif;
+    border: 1px rgba(0, 0, 0, 0.6);
+}
+.mustatRajat{
+    border: 1px solid black;
+}
+.eiNakyvissa:empty {
+    border: none;
+}
+/*div, span, p{ TÄLLÄ VOI TESTAA HITON HELPOSTI MENEEKÖ LAYERIT PÄÄLLEKKÄIN! KAIKILLE BORDERIT*/
+    /*border: 1px solid red;*/
+/*}*/
+
+.marginaalit {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.listansaadot {
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+}
+.listansaadot tr:hover {
+    color:black;
+}
+
+.alert {
+    width:80%;
+}
