@@ -1,1 +1,76 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Junia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="junahaku.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body style="background-image: url(bakkari1.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: center; background-size:  cover">
+<div class="container-fluid marginaalit">
+
+    <div class="row" style="float: right; margin-top: 30px">
+        <div id="piilotettava">
+
+            <div class="form-group form-group-sm">
+
+                <input class="form-control mustatRajat" type="text" placeholder="Käyttäjätunnus" name="uname" id="id"
+                       style="margin-bottom:5px" required>
+                <input class="form-control mustatRajat" type="password" placeholder="Salasana" name="psw" id="pw"
+                       style="margin-bottom:5px" required>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button class="btn btn-xs btn-block mustatRajat" onclick="kirjautuuSisaanJosTunnuksetOikein()">Kirjaudu</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-xs btn-block mustatRajat" onclick="luoJaLisaaUusiKayttaja()">Luo tili</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="kirjauduUlosPiilotettava"></div>
+    </div>
+    <div id="viestit" style="float: right; margin-top: 30px; margin-right: 30px">
+    </div>
+    <div class="row">
+        <div>
+
+            <h1>JUNAVERSUM!</h1>
+
+            <div class="form-group">
+                <select name="lahtoasema" id="lahto" class="preferenceSelect form-control mustatRajat"
+                        style="margin-bottom:5px"></select>
+
+                <select name="paateasema" id="paate" class="preferenceSelect form-control mustatRajat"
+                        style="margin-bottom:5px"></select>
+
+                <input type="datetime-local" id="pvm" class="form-control mustatRajat">
+            </div>
+
+            <button id="nappi" class="btn btn-block mustatRajat"><span class="glyphicon glyphicon-search"></span>   Hae</button>
+            <br>
+            <button id="haeAsema" class="btn btn-block mustatRajat">Etsi lähin asema</button>
+            <br>
+            <div id="suosikkiReitti" class="mustatRajat eiNakyvissa"></div>
+            <br>
+            <div id="faviNappi" class="mustatRajat eiNakyvissa"></div>
+            <br>
+        </div>
+        <div id="lista" class="listansaadot"></div>
+    </div>
+    <!--<button class="btn" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
+
+</div>
+</body>
+</html>
